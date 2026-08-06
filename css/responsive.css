@@ -3,56 +3,34 @@
 ============================================= */
 
 @media (max-width: 960px) {
-  /* Make sure the header container allows side-by-side placement */
-  .header-inner, .site-header, .header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
 
-  /* Keep the BOOK NOW button visible and place it right before the hamburger */
-  .btn-book-now {
-    display: inline-block !important;
-    position: relative;
-    margin-right: 15px; /* Space between the button and the hamburger icon */
-    font-size: 0.70rem;
-    padding: 8px 14px;
-  }
+.header-inner, .site-header, .header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+}
 
-  /* Trigger the hamburger dropdown menu earlier so regular nav links don't clutter */
-  .hamburger-toggle { 
-    display: flex !important; 
-  }
+.header-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 14px;
+  flex-wrap: nowrap;
+}
 
-  .navbar {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0;
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100vh;
-    width: min(78vw, 320px);
-    background: var(--bg-dark);
-    padding: 90px 32px 40px;
-    z-index: 180;
-    transform: translateX(100%);
-    transition: transform .35s var(--ease);
-    box-shadow: -8px 0 30px rgba(62,39,35,.3);
-  }
-  
-  .navbar.active { 
-    transform: translateX(0); 
-  }
+.btn-book-now {
+  display: inline-block !important;
+  flex-shrink: 0;
+  font-size: 0.70rem;
+  padding: 8px 14px;
+}
 
-  .navbar .nav-link {
-    padding: 16px 0;
-    font-size: .85rem;
-    letter-spacing: 2px;
-    width: 100%;
-    border-bottom: 1px solid rgba(205,151,119,.1);
-  }
+.hamburger-toggle {
+  display: flex !important;
+  flex-shrink: 0;
+}
+
 }
 
 @media (max-width: 1024px) {
