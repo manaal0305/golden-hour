@@ -4,19 +4,19 @@
 
 @media (max-width: 960px) {
   /* Make sure the header container allows side-by-side placement */
-  .header-inner, .site-header {
+  .header-inner, .site-header, .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
   /* Keep the BOOK NOW button visible and place it right before the hamburger */
-  .nav-book-btn, .book-now-btn {
+  .btn-book-now {
     display: inline-block !important;
     position: relative;
     margin-right: 15px; /* Space between the button and the hamburger icon */
-    font-size: 0.75rem;
-    padding: 8px 16px;
+    font-size: 0.70rem;
+    padding: 8px 14px;
   }
 
   /* Trigger the hamburger dropdown menu earlier so regular nav links don't clutter */
