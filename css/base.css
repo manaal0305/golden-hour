@@ -1,0 +1,114 @@
+/* =============================================
+   GOLDEN HOUR SALON — base.css
+   Fonts, design tokens, reset, core typography
+============================================= */
+
+/* ── Google Fonts ── */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Alex+Brush&family=Montserrat:wght@300;400;500;600&family=Libre+Baskerville:ital,wght@0,400;1,400&display=swap');
+
+/* ── Design Tokens ── */
+:root {
+  --b50:  #EFEBE9;
+  --b100: #D7CCC8;
+  --b200: #BCAAA4;
+  --b300: #A1887F;
+  --b400: #8D6E63;
+  --b500: #795548;
+  --b600: #6D4C41;
+  --b700: #5D4037;
+  --b800: #4E342E;
+  --b900: #3E2723;
+
+  --tw0:  #EDC4B3;
+  --tw1:  #E6B8A2;
+  --tw2:  #DEAB90;
+  --tw3:  #D69F7E;
+  --tw4:  #CD9777;
+  --tw5:  #C38E70;
+  --tw6:  #B07D62;
+
+  --bg:          var(--b50);
+  --bg-card:     #FAF8F6;
+  --bg-dark:     var(--b800);
+  --bg-deeper:   var(--b900);
+  --text:        var(--b900);
+  --text-soft:   var(--b400);
+  --border:      var(--b100);
+  --accent:      var(--tw4);
+  --accent-lt:   var(--tw0);
+
+  --serif:    'Cormorant Garamond', Georgia, serif;
+  --cursive:  'Alex Brush', cursive;
+  --sans:     'Montserrat', sans-serif;
+  --tagline:  'Libre Baskerville', Georgia, serif;
+
+  --r-xl:   28px;
+  --r-lg:   18px;
+  --r-md:   10px;
+  --r-pill: 100px;
+
+  --ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+img { display: block; max-width: 100%; }
+button { font-family: var(--sans); cursor: pointer; }
+a { text-decoration: none; }
+
+html, body {
+  background: radial-gradient(ellipse at center, rgba(205,151,119,.14) 0%, var(--b200) 62%);
+  font-family: var(--sans);
+  color: var(--text);
+  overflow-x: hidden;
+  padding: 36px 18px;
+  min-height: 100vh;
+}
+
+#embersCanvas { display: none !important; }
+
+.section-subtitle {
+  display: block;
+  font-size: .68rem;
+  font-weight: 600;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 14px;
+}
+
+.section-title {
+  font-family: var(--serif);
+  font-size: 3rem;
+  font-weight: 300;
+  color: var(--text);
+  line-height: 1.18;
+}
+
+.title-cursive {
+  font-family: var(--cursive);
+  font-size: 3.4rem;
+  color: var(--accent);
+  text-transform: none !important;
+  font-weight: 400;
+}
+
+.text-cursive {
+  font-family: var(--cursive);
+  text-transform: none !important;
+  color: var(--accent);
+}
+
+.section-paragraph {
+  font-size: .92rem;
+  line-height: 1.8;
+  font-weight: 300;
+  color: var(--text);
+  margin-bottom: 28px;
+}
+
+.page-view { animation: fadeUp .55s var(--ease) both; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golden Hour Salon | Ridgewood, NJ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/pages.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+
+    <canvas id="embersCanvas" style="display:none;"></canvas>
+    <audio id="bg-music" src="../assets/aakash-gandhi-heavenly-(no-copyright-music)-made-with-Voicemod.mp3" loop></audio>
+    <button class="music-toggle paused" id="musicControl" title="Toggle Ambient Music" aria-label="Toggle ambient music"></button>
+
+    <div class="app-window">
+
+        <header class="main-header">
+            <div class="header-container">
+                <div class="logo-area">
+                    <img src="../assets/goldenhrlogo.png" alt="Golden Hour Hair" class="main-logo-img">
+                </div>
+                <nav class="navbar">
+                    <a href="index.html" class="nav-link">HOME</a>
+                    <a href="services.html" class="nav-link">SERVICES</a>
+                    <a href="bridal.html" class="nav-link">BRIDAL</a>
+                    <a href="education.html" class="nav-link">GOLDEN EDUCATION</a>
+                    <a href="team.html" class="nav-link">THE TEAM</a>
+                    <a href="suites.html" class="nav-link">SUITE ARTISTS</a>
+                </nav>
+                <div class="header-actions">
+                    <a href="booking.html" class="btn-book-now nav-link">BOOK NOW</a>
+                    <button class="hamburger-toggle" id="hamburgerToggle" aria-label="Toggle menu">
+                        <span></span><span></span><span></span>
+                    </button>
+                </div>
+            </div>
+        </header>
+        <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+
+        <section id="page-home" class="page-view">
+
+            <div class="hero-section">
+                <div class="hero-overlay-sheer"></div>
+                <div class="hero-breathing-bg"></div>
+                <div class="hero-content">
+                    <p class="hero-tagline">Where every client leaves bathed<br>in their own radiant, golden hue</p>
+                    <p class="hero-subtext">A serene unisex studio in Ridgewood, NJ</p>
+                    <a href="booking.html" class="btn-primary">Schedule a Consultation</a>
+                </div>
+            </div>
+
+            <div class="section-padding intro-section">
+                <div class="container grid-2">
+                    <div class="intro-image-container">
+                        <div class="image-frame-wrapper">
+                            <img src="../assets/GH-37.jpg" alt="Studio atmosphere" class="editorial-inline-img">
+                        </div>
+                    </div>
+                    <div class="intro-text-container">
+                        <span class="section-subtitle">WELCOME TO THE HOUR</span>
+                        <h3 class="section-title">Cultivating Calm,<br>Creating Beauty</h3>
+                        <p class="section-paragraph">
+                            Enter a space meticulously tailored around complete sensory renewal. At Golden Hour Salon, we merge editorial technical precision with a deeply grounded wellness philosophy. Every diagnostic mapping configuration, custom color placement, and luxury styling track is structured to respect your time, identity, and personal aesthetic.
+                        </p>
+                        <a href="team.html" class="btn-secondary">Meet The Creatives</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="specialties-section">
+                <div class="specialty-block block-extensions">
+                    <div class="block-bg-image-layer" style="background-image: url('../assets/extensions.jpg');"></div>
+                    <div class="block-content-layer">
+                        <h4 class="spec-title-solid">HAIR <span class="spec-title-cursive">Extensions</span></h4>
+                        <p>Premium, low-tension installations seamlessly tailored for density and natural dimensional tone.</p>
+                        <span class="spec-policy-note">Initial Consultation Required</span>
+                        <a href="services.html" class="btn-outline">Explore Extension Packages</a>
+                    </div>
+                    <div class="block-hover-overlay"></div>
+                </div>
+                <div class="specialty-block block-bridal">
+                    <div class="block-bg-image-layer" style="background-image: url('../assets/bridal.jpg');"></div>
+                    <div class="block-content-layer">
+                        <h4 class="spec-title-solid">BRIDAL <span class="spec-title-cursive">Styling</span></h4>
+                        <p>Bespoke formal design built to withstand milestone moments. Available for on-location travel.</p>
+                        <span class="spec-policy-note">Retainer Deposit Required</span>
+                        <a href="bridal.html" class="btn-outline">View Bridal Packages</a>
+                    </div>
+                    <div class="block-hover-overlay"></div>
+                </div>
+                <div class="specialty-block block-education">
+                    <div class="block-bg-image-layer" style="background-image: url('../assets/applying.jpg');"></div>
+                    <div class="block-content-layer">
+                        <h4 class="spec-title-solid">GOLDEN <span class="spec-title-cursive">Education</span></h4>
+                        <p>Learn luxury K-Tip & Weft extension techniques from our specialists — for stylists and cosmetology students alike.</p>
+                        <span class="spec-policy-note">For Stylists & Students</span>
+                        <a href="education.html" class="btn-outline">Learn More</a>
+                    </div>
+                    <div class="block-hover-overlay"></div>
+                </div>
+            </div>
+
+            <div class="section-padding home-suites-summary">
+                <div class="container center-text">
+                    <span class="section-subtitle">THE ECOSYSTEM</span>
+                    <h3 class="section-title">Our Shared <span class="title-cursive">studio spaces</span></h3>
+                    <p class="section-paragraph max-width-center">Beyond our primary styling floor, our layout hosts independent specialist micro-studios. Meet our resident artists or explore available workspace allocations.</p>
+                    <div class="home-suites-mini-grid">
+                        <a href="suites.html" class="suite-mini-card">
+                            <div class="mini-card-img-holder">
+                                <img src="../assets/mariela.jpg" alt="Mariela's Lash & Esthetics Studio">
+                            </div>
+                            <span class="mini-suite-num">SUITE 01</span>
+                            <h6>Lash, Facial & Brow Studio</h6>
+                            <span class="mini-suite-btn">View Profile →</span>
+                        </a>
+                        <a href="suites.html" class="suite-mini-card">
+                            <div class="mini-card-img-holder open-lease-placeholder">
+                                <span>Leasing Slot Open</span>
+                            </div>
+                            <span class="mini-suite-num">SUITE 02</span>
+                            <h6>Workspace Allocation</h6>
+                            <span class="mini-suite-btn">Lease Options →</span>
+                        </a>
+                        <a href="suites.html" class="suite-mini-card">
+                            <div class="mini-card-img-holder open-lease-placeholder">
+                                <span>Leasing Slot Open</span>
+                            </div>
+                            <span class="mini-suite-num">SUITE 03</span>
+                            <h6>Workspace Allocation</h6>
+                            <span class="mini-suite-btn">Lease Options →</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-padding testimonials-section">
+                <div class="container">
+                    <div class="center-title">
+                        <h3 class="section-title">Client <span class="title-cursive">Reflections</span></h3>
+                    </div>
+                    <div class="testimonials-grid">
+                        <div class="review-card">
+                            <div class="stars">★★★★★</div>
+                            <p class="review-text">"The ultimate serene experience in Ridgewood. The color execution is unparalleled, and leaving with a completely refreshed headspace is unmatched."</p>
+                            <span class="reviewer-name">— Elena R. (Google Review)</span>
+                        </div>
+                        <div class="review-card">
+                            <div class="stars">★★★★★</div>
+                            <p class="review-text">"They handle extensions with true master precision. The environment feels exactly like a high-end luxury wellness retreat — completely tranquil."</p>
+                            <span class="reviewer-name">— Julianne M. (Google Review)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <footer class="main-footer">
+            <div class="container footer-content">
+                <div class="footer-brand">
+                    <img src="../assets/goldenhrlogo.png" alt="Golden Hour Logo" class="footer-brand-logo">
+                    <p class="footer-address">44 Franklin Ave, Ridgewood, NJ 07450</p>
+                    <p class="footer-phone-text">Contact: (201) 882-1099</p>
+                </div>
+                <div class="footer-links-directory">
+                    <div class="footer-nav-col">
+                        <h6>NAVIGATION</h6>
+                        <a href="index.html">Home</a>
+                        <a href="services.html">Services</a>
+                        <a href="bridal.html">Bridal</a>
+                        <a href="booking.html">Book Now</a>
+                    </div>
+                    <div class="footer-nav-col">
+                        <h6>DIRECTORY</h6>
+                        <a href="education.html">Golden Education</a>
+                        <a href="team.html">The Team</a>
+                        <a href="suites.html">Suite Artists</a>
+                        <a href="policies.html">Studio Policies</a>
+                    </div>
+                </div>
+                <div class="footer-socials">
+                    <h6>CONNECT</h6>
+                    <div class="footer-social-icons">
+                        <a href="https://www.instagram.com/golden_hour_hair/" target="_blank" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.facebook.com/p/Golden-Hour-61551845073390/" target="_blank" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Golden Hour Hair &mdash; Ridgewood, New Jersey. All rights reserved.</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <div class="chatbot-widget" id="chatbotRoot"></div>
+
+    <script src="../js/navigation.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

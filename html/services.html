@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | Golden Hour Salon</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/pages.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+
+    <canvas id="embersCanvas" style="display:none;"></canvas>
+    <audio id="bg-music" src="../assets/aakash-gandhi-heavenly-(no-copyright-music)-made-with-Voicemod.mp3" loop></audio>
+    <button class="music-toggle paused" id="musicControl" title="Toggle Ambient Music" aria-label="Toggle ambient music"></button>
+
+    <div class="app-window">
+
+        <header class="main-header">
+            <div class="header-container">
+                <div class="logo-area">
+                    <img src="../assets/goldenhrlogo.png" alt="Golden Hour Hair" class="main-logo-img">
+                </div>
+                <nav class="navbar">
+                    <a href="index.html" class="nav-link">HOME</a>
+                    <a href="services.html" class="nav-link">SERVICES</a>
+                    <a href="bridal.html" class="nav-link">BRIDAL</a>
+                    <a href="education.html" class="nav-link">GOLDEN EDUCATION</a>
+                    <a href="team.html" class="nav-link">THE TEAM</a>
+                    <a href="suites.html" class="nav-link">SUITE ARTISTS</a>
+                </nav>
+                <div class="header-actions">
+                    <a href="booking.html" class="btn-book-now nav-link">BOOK NOW</a>
+                    <button class="hamburger-toggle" id="hamburgerToggle" aria-label="Toggle menu">
+                        <span></span><span></span><span></span>
+                    </button>
+                </div>
+            </div>
+        </header>
+        <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+
+        <section id="page-services" class="page-view">
+            <div class="section-padding">
+                <div class="container-narrow">
+                    <div class="center-title">
+                        <h3 class="section-title">The Service <span class="title-cursive">Menu</span></h3>
+                        <p class="section-paragraph center-text">
+                            Curated care, tailored to you and confirmed at booking.
+                        </p>
+                    </div>
+
+                    <div class="extension-featured-box">
+                        <h4 class="card-inner-title">SIGNATURE EXTENSIONS</h4>
+                        <p>We are known for our seamless, high-focus extension configurations. Because every installation requires distinct physical length mapping and custom color blending, accurate pricing is generated exclusively during your consultation.</p>
+                        <div class="featured-flex">
+                            <span class="price-consultation">Pricing determined upon initial consultation</span>
+                            <a href="booking.html" class="btn-secondary-light">Request Consultation</a>
+                        </div>
+                    </div>
+
+                    <div class="bridal-pricing-card">
+
+                        <h4 class="card-inner-title">STYLING & CUTTING</h4>
+                        <p class="card-desc">Precision cuts and finishing, tailored to your texture and lifestyle.</p>
+
+                        <div class="bridal-fee-line">
+                            <div class="fee-detail">
+                                <span class="fee-name">Women's Precision Haircut</span>
+                                <span class="fee-explanation">Includes a master diagnostic cleanse, relaxing botanical scalp rub, and a complementary signature blowout finish.</span>
+                            </div>
+                        </div>
+                        <div class="bridal-fee-line">
+                            <div class="fee-detail">
+                                <span class="fee-name">Standard Thermal Blowout</span>
+                                <span class="fee-explanation">Cleanse, scalp rebalancing mask infusion, and custom structured thermal finishing.</span>
+                            </div>
+                        </div>
+                        <div class="bridal-fee-line">
+                            <div class="fee-detail">
+                                <span class="fee-name">Updos & Advanced Formal Artistry</span>
+                                <span class="fee-explanation">Complex structural pinning for galas, events, or evening functions. (Excludes bridal trials.)</span>
+                            </div>
+                        </div>
+                        <div class="bridal-fee-line">
+                            <div class="fee-detail">
+                                <span class="fee-name">Men's Tailored Haircut</span>
+                                <span class="fee-explanation">Clean detailing and refreshing botanical hot-towel application.</span>
+                            </div>
+                        </div>
+
+                        <hr class="category-divider">
+
+                        <h4 class="card-inner-title">DIMENSIONAL COLOR</h4>
+                        <p class="card-desc">*Blowout services are not included in color menus. Kindly pair a styling selection with your color reservation if desired.</p>
+
+                        <div class="bridal-fee-line">
+                            <div class="fee-detail"><span class="fee-name">Glaze, Gloss & Tone Treatment</span></div>
+                        </div>
+                        <div class="bridal-fee-line">
+                            <div class="fee-detail"><span class="fee-name">Single Process Color Refinement</span></div>
+                        </div>
+                        <div class="bridal-fee-line">
+                            <div class="fee-detail"><span class="fee-name">Hairline Touch-Up Single Process</span></div>
+                        </div>
+                        <div class="bridal-fee-line">
+                            <div class="fee-detail"><span class="fee-name">Partial Highlights Dimensional</span></div>
+                        </div>
+                        <div class="bridal-fee-line">
+                            <div class="fee-detail"><span class="fee-name">Full Highlights Luminosity Spectrum</span></div>
+                        </div>
+                        <div class="bridal-fee-line">
+                            <div class="fee-detail"><span class="fee-name">Custom Color & Balayage</span></div>
+                        </div>
+                        <div class="bridal-fee-line">
+                            <div class="fee-detail"><span class="fee-name">Double Process Blonde Reconstruction</span></div>
+                        </div>
+                        <div class="bridal-fee-line">
+                            <div class="fee-detail"><span class="fee-name">Lowlighting Placement</span></div>
+                        </div>
+
+                        <hr class="category-divider">
+
+                        <h4 class="card-inner-title">BOTANICAL HEALTH</h4>
+                        <p class="card-desc">Restorative treatments to strengthen and repair.</p>
+
+                        <div class="bridal-fee-line">
+                            <div class="fee-detail"><span class="fee-name">Keratin Smooth Infusion System</span></div>
+                        </div>
+                        <div class="bridal-fee-line">
+                            <div class="fee-detail"><span class="fee-name">Hair Botox Intensive Healing Therapy</span></div>
+                        </div>
+                        <div class="bridal-fee-line">
+                            <div class="fee-detail"><span class="fee-name">Deep Conditioning Botanical Mask</span></div>
+                        </div>
+
+                        <div class="center-text margin-top-2">
+                            <p class="notice-text">Exact rates vary by stylist and are confirmed at booking through our GlossGenius portal.</p>
+                            <a href="booking.html" class="btn-primary">View Availability & Book</a>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <footer class="main-footer">
+            <div class="container footer-content">
+                <div class="footer-brand">
+                    <img src="../assets/goldenhrlogo.png" alt="Golden Hour Logo" class="footer-brand-logo">
+                    <p class="footer-address">44 Franklin Ave, Ridgewood, NJ 07450</p>
+                    <p class="footer-phone-text">Contact: (201) 882-1099</p>
+                </div>
+                <div class="footer-links-directory">
+                    <div class="footer-nav-col">
+                        <h6>NAVIGATION</h6>
+                        <a href="index.html">Home</a>
+                        <a href="services.html">Services</a>
+                        <a href="bridal.html">Bridal</a>
+                        <a href="booking.html">Book Now</a>
+                    </div>
+                    <div class="footer-nav-col">
+                        <h6>DIRECTORY</h6>
+                        <a href="education.html">Golden Education</a>
+                        <a href="team.html">The Team</a>
+                        <a href="suites.html">Suite Artists</a>
+                        <a href="policies.html">Studio Policies</a>
+                    </div>
+                </div>
+                <div class="footer-socials">
+                    <h6>CONNECT</h6>
+                    <div class="footer-social-icons">
+                        <a href="https://www.instagram.com/golden_hour_hair/" target="_blank" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.facebook.com/p/Golden-Hour-61551845073390/" target="_blank" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Golden Hour Hair &mdash; Ridgewood, New Jersey. All rights reserved.</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <div class="chatbot-widget" id="chatbotRoot"></div>
+
+    <script src="../js/navigation.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

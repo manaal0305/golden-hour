@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suite Artists | Golden Hour Salon</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/pages.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+
+    <canvas id="embersCanvas" style="display:none;"></canvas>
+    <audio id="bg-music" src="../assets/aakash-gandhi-heavenly-(no-copyright-music)-made-with-Voicemod.mp3" loop></audio>
+    <button class="music-toggle paused" id="musicControl" title="Toggle Ambient Music" aria-label="Toggle ambient music"></button>
+
+    <div class="app-window">
+
+        <header class="main-header">
+            <div class="header-container">
+                <div class="logo-area">
+                    <img src="../assets/goldenhrlogo.png" alt="Golden Hour Hair" class="main-logo-img">
+                </div>
+                <nav class="navbar">
+                    <a href="index.html" class="nav-link">HOME</a>
+                    <a href="services.html" class="nav-link">SERVICES</a>
+                    <a href="bridal.html" class="nav-link">BRIDAL</a>
+                    <a href="education.html" class="nav-link">GOLDEN EDUCATION</a>
+                    <a href="team.html" class="nav-link">THE TEAM</a>
+                    <a href="suites.html" class="nav-link">SUITE ARTISTS</a>
+                </nav>
+                <div class="header-actions">
+                    <a href="booking.html" class="btn-book-now nav-link">BOOK NOW</a>
+                    <button class="hamburger-toggle" id="hamburgerToggle" aria-label="Toggle menu">
+                        <span></span><span></span><span></span>
+                    </button>
+                </div>
+            </div>
+        </header>
+        <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+
+        <section id="page-suites" class="page-view">
+            <div class="section-padding">
+                <div class="container">
+                    <div class="center-title">
+                        <h3 class="section-title">Independent <span class="title-cursive">Artisans</span></h3>
+                        <p class="section-subtitle">The collaborative beauty ecosystem</p>
+                    </div>
+                    <div class="suites-grid">
+
+                        <div class="suite-card">
+                            <div class="suite-img-frame">
+                                <img src="../assets/mariela.jpg" alt="Mariela — Lash, Facial & Brow Studio" class="suite-inline-img">
+                            </div>
+                            <div class="suite-info">
+                                <span class="suite-number">SUITE 01</span>
+                                <h5>Mariela</h5>
+                                <p>North Jersey Licensed Esthetician specializing in lash artistry, facials, and brow shaping.</p>
+                                <a href="https://linktr.ee/savedskn" target="_blank" rel="noopener" class="btn-text">Book with Mariela →</a>
+                            </div>
+                        </div>
+
+                        <div class="suite-card suite-available-box">
+                            <div class="suite-info center-text-alignment">
+                                <span class="suite-number">SUITE 02</span>
+                                <h4 class="available-title">This Space<br>Could Be Yours</h4>
+                                <p class="available-desc">An established independent beauty professional looking for a quiet, sophisticated micro-studio in Ridgewood?</p>
+                                <div class="contact-box-layer">
+                                    <span class="contact-call-label">Call to review leasing criteria</span>
+                                    <span class="phone-number-string">(201) 555-0199</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="suite-card suite-available-box">
+                            <div class="suite-info center-text-alignment">
+                                <span class="suite-number">SUITE 03</span>
+                                <h4 class="available-title">This Space<br>Could Be Yours</h4>
+                                <p class="available-desc">An established independent beauty professional looking for a quiet, sophisticated micro-studio in Ridgewood?</p>
+                                <div class="contact-box-layer">
+                                    <span class="contact-call-label">Call to review leasing criteria</span>
+                                    <span class="phone-number-string">(201) 555-0199</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="main-footer">
+            <div class="container footer-content">
+                <div class="footer-brand">
+                    <img src="../assets/goldenhrlogo.png" alt="Golden Hour Logo" class="footer-brand-logo">
+                    <p class="footer-address">44 Franklin Ave, Ridgewood, NJ 07450</p>
+                    <p class="footer-phone-text">Contact: (201) 882-1099</p>
+                </div>
+                <div class="footer-links-directory">
+                    <div class="footer-nav-col">
+                        <h6>NAVIGATION</h6>
+                        <a href="index.html">Home</a>
+                        <a href="services.html">Services</a>
+                        <a href="bridal.html">Bridal</a>
+                        <a href="booking.html">Book Now</a>
+                    </div>
+                    <div class="footer-nav-col">
+                        <h6>DIRECTORY</h6>
+                        <a href="education.html">Golden Education</a>
+                        <a href="team.html">The Team</a>
+                        <a href="suites.html">Suite Artists</a>
+                        <a href="policies.html">Studio Policies</a>
+                    </div>
+                </div>
+                <div class="footer-socials">
+                    <h6>CONNECT</h6>
+                    <div class="footer-social-icons">
+                        <a href="https://www.instagram.com/golden_hour_hair/" target="_blank" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.facebook.com/p/Golden-Hour-61551845073390/" target="_blank" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Golden Hour Hair &mdash; Ridgewood, New Jersey. All rights reserved.</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <div class="chatbot-widget" id="chatbotRoot"></div>
+
+    <script src="../js/navigation.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>
