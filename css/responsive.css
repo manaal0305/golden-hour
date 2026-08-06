@@ -3,82 +3,69 @@
 ============================================= */
 
 @media (max-width: 960px) {
-
-  .header-inner, 
-  .site-header, 
-  .header-container {
+  /* Keep logo on the left and actions on the right */
+  .header-container, .site-header, .header-inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: nowrap;
   }
 
+  /* Force button and hamburger into a single horizontal row */
   .header-actions {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 14px;
-    flex-wrap: nowrap;
-    margin-left: auto;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 12px !important;
   }
 
+  /* Style the BOOK NOW button */
   .btn-book-now {
-    display: inline-block !important;
-    flex-shrink: 0;
-    margin-right: 0;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    margin: 0 !important;
     font-size: 0.70rem;
     padding: 8px 14px;
+    white-space: nowrap;
   }
 
-  .hamburger-toggle {
+  /* Reveal and center hamburger icon */
+  .hamburger-toggle { 
     display: flex !important;
-    flex-shrink: 0;
-    z-index: 200;
+    align-items: center;
+    justify-content: center;
   }
 
-
-  /* MOBILE NAV DRAWER */
+  /* Off-canvas navigation menu */
   .navbar {
-    display: flex !important;
+    display: flex;
     flex-direction: column;
     align-items: flex-start;
-
+    gap: 0;
     position: fixed;
     top: 0;
     right: 0;
-
     height: 100vh;
     width: min(78vw, 320px);
-
     background: var(--bg-dark);
-
     padding: 90px 32px 40px;
-
     z-index: 180;
-
     transform: translateX(100%);
     transition: transform .35s var(--ease);
-
     box-shadow: -8px 0 30px rgba(62,39,35,.3);
-
-    overflow-y: auto;
   }
-
-
-  /* ONLY SHOW WHEN HAMBURGER IS CLICKED */
-  .navbar.active {
-    transform: translateX(0);
+  
+  .navbar.active { 
+    transform: translateX(0); 
   }
-
 
   .navbar .nav-link {
-    width: 100%;
     padding: 16px 0;
     font-size: .85rem;
     letter-spacing: 2px;
+    width: 100%;
     border-bottom: 1px solid rgba(205,151,119,.1);
   }
-
 }
 
 @media (max-width: 1024px) {
