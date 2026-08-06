@@ -56,6 +56,7 @@
   .section-title { font-size: 2.2rem; }
   .hero-tagline { font-size: 1.55rem; }
   .hero-content { transform: translateY(-30px); }
+  .hero-subtext { margin-top: 130px; }
   .intro-text-container .section-title { font-size: 1.9rem; }
   .main-footer { padding: 52px 24px 32px; }
   .footer-content { flex-direction: column; gap: 28px; }
@@ -70,15 +71,14 @@
 }
 
 @media (max-width: 600px) {
-  body { padding: 8px; }
+  body { padding: 4px; }
   .app-window {
-    border-radius: 20px;
+    border-radius: 16px;
     box-shadow: none;
     max-width: 100%;
   }
   .policy-block-text { padding: 28px 22px; }
 }
-
 
 @media (max-width: 480px) {
   .container, .container-narrow { padding: 0 18px; }
