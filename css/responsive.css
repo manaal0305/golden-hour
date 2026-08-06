@@ -4,32 +4,80 @@
 
 @media (max-width: 960px) {
 
-.header-inner, .site-header, .header-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: nowrap;
-}
+  .header-inner, 
+  .site-header, 
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
 
-.header-actions {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 14px;
-  flex-wrap: nowrap;
-}
+  .header-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 14px;
+    flex-wrap: nowrap;
+    margin-left: auto;
+  }
 
-.btn-book-now {
-  display: inline-block !important;
-  flex-shrink: 0;
-  font-size: 0.70rem;
-  padding: 8px 14px;
-}
+  .btn-book-now {
+    display: inline-block !important;
+    flex-shrink: 0;
+    margin-right: 0;
+    font-size: 0.70rem;
+    padding: 8px 14px;
+  }
 
-.hamburger-toggle {
-  display: flex !important;
-  flex-shrink: 0;
-}
+  .hamburger-toggle {
+    display: flex !important;
+    flex-shrink: 0;
+    z-index: 200;
+  }
+
+
+  /* MOBILE NAV DRAWER */
+  .navbar {
+    display: flex !important;
+    flex-direction: column;
+    align-items: flex-start;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+
+    height: 100vh;
+    width: min(78vw, 320px);
+
+    background: var(--bg-dark);
+
+    padding: 90px 32px 40px;
+
+    z-index: 180;
+
+    transform: translateX(100%);
+    transition: transform .35s var(--ease);
+
+    box-shadow: -8px 0 30px rgba(62,39,35,.3);
+
+    overflow-y: auto;
+  }
+
+
+  /* ONLY SHOW WHEN HAMBURGER IS CLICKED */
+  .navbar.active {
+    transform: translateX(0);
+  }
+
+
+  .navbar .nav-link {
+    width: 100%;
+    padding: 16px 0;
+    font-size: .85rem;
+    letter-spacing: 2px;
+    border-bottom: 1px solid rgba(205,151,119,.1);
+  }
 
 }
 
