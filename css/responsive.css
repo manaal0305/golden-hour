@@ -70,7 +70,7 @@
 }
 
 @media (max-width: 600px) {
-  body { padding: 0; }
+  body { padding: 8px; }
   .app-window {
     border-radius: 20px;
     box-shadow: none;
