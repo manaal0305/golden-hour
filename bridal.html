@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book Now | Golden Hour Salon</title>
+    <title>Bridal | Golden Hour Salon</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="../css/base.css">
-    <link rel="stylesheet" href="../css/layout.css">
-    <link rel="stylesheet" href="../css/components.css">
-    <link rel="stylesheet" href="../css/pages.css">
-    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
 
     <canvas id="embersCanvas" style="display:none;"></canvas>
-    <audio id="bg-music" src="../assets/aakash-gandhi-heavenly-(no-copyright-music)-made-with-Voicemod.mp3" loop></audio>
+    <audio id="bg-music" src="assets/aakash-gandhi-heavenly-(no-copyright-music)-made-with-Voicemod.mp3" loop></audio>
     <button class="music-toggle paused" id="musicControl" title="Toggle Ambient Music" aria-label="Toggle ambient music"></button>
 
     <div class="app-window">
@@ -24,7 +24,7 @@
         <header class="main-header">
             <div class="header-container">
                 <div class="logo-area">
-                    <img src="../assets/goldenhrlogo.png" alt="Golden Hour Hair" class="main-logo-img">
+                    <img src="assets/goldenhrlogo.png" alt="Golden Hour Hair" class="main-logo-img">
                 </div>
                 <nav class="navbar">
                     <a href="index.html" class="nav-link">HOME</a>
@@ -44,17 +44,44 @@
         </header>
         <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
 
-        <section id="page-booking" class="page-view">
+        <section id="page-bridal" class="page-view">
             <div class="section-padding">
-                <div class="container-narrow center-text-alignment">
-                    <h3 class="section-title">Reserve Your <span class="title-cursive">Hour</span></h3>
-                    <p class="section-paragraph">We use the secure GlossGenius digital reservation system. All extension applications and bridal projects require an introductory diagnostic consultation. Pricing is confirmed at booking and may vary by stylist.</p>
-                    <div class="booking-widget-placeholder">
-                        <div class="widget-inner-frame">
-                            <p class="widget-text">You'll be taken to our secure GlossGenius booking calendar to select a stylist, service, and time.</p>
-                            <div class="mock-portal-box">
-                                <a href="https://goldenhourridgewood.glossgenius.com/?utm_source=ig&utm_medium=social&utm_content=link_in_bio" target="_blank" rel="noopener" class="btn-primary">Go to Booking Calendar</a>
+                <div class="container-narrow">
+                    <div class="center-title">
+                        <h3 class="section-title">Bridal <span class="title-cursive">Arrangements</span></h3>
+                        <p class="section-paragraph center-text">
+                            High-end upstyling architectures tailored to withstand your milestone moments. Our studio team handles specialized hair profiles and is available for verified on-site travel requests.
+                        </p>
+                    </div>
+                    <div class="bridal-pricing-card">
+                        <h4 class="card-inner-title">BRIDE FORMAL COUTURE PACKAGES</h4>
+                        <p class="card-desc">Exact pricing depends on hair length, thickness, and complexity, and is confirmed at your trial or on the GlossGenius booking calendar.</p>
+
+                        <div class="bridal-fee-line">
+                            <div class="fee-detail">
+                                <span class="fee-name">Bridal Hair — Trial</span>
+                                <span class="fee-explanation">A dedicated run-through of your wedding-day style before the big day.</span>
                             </div>
+                            <span class="fee-cost">$200+ <small>90 min+</small></span>
+                        </div>
+                        <div class="bridal-fee-line">
+                            <div class="fee-detail">
+                                <span class="fee-name">Bridal Party — Day Of</span>
+                                <span class="fee-explanation">Styling for bridesmaids and party members on the wedding day. Priced per person.</span>
+                            </div>
+                            <span class="fee-cost">$200+ <small>60 min+</small></span>
+                        </div>
+                        <div class="bridal-fee-line">
+                            <div class="fee-detail">
+                                <span class="fee-name">Bride — Day Of</span>
+                                <span class="fee-explanation">Your complete wedding-day hair styling, from start to finish.</span>
+                            </div>
+                            <span class="fee-cost">$400+ <small>120 min+</small></span>
+                        </div>
+
+                        <div class="center-text margin-top-2">
+                            <p class="notice-text">Due to strict timeline constraints, checkout is locked until a face-to-face planning consult or trial is finalized.</p>
+                            <a href="booking.html" class="btn-primary">Initiate Bridal Consultation</a>
                         </div>
                     </div>
                 </div>
@@ -64,7 +91,7 @@
         <footer class="main-footer">
             <div class="container footer-content">
                 <div class="footer-brand">
-                    <img src="../assets/goldenhrlogo.png" alt="Golden Hour Logo" class="footer-brand-logo">
+                    <img src="assets/goldenhrlogo.png" alt="Golden Hour Logo" class="footer-brand-logo">
                     <p class="footer-address">44 Franklin Ave, Ridgewood, NJ 07450</p>
                     <p class="footer-phone-text">Contact: (201) 882-1099</p>
                 </div>
@@ -105,7 +132,7 @@
 
     <div class="chatbot-widget" id="chatbotRoot"></div>
 
-    <script src="../js/navigation.js"></script>
-    <script src="../js/main.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

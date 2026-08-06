@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Golden Education | Golden Hour Salon</title>
+    <title>The Team | Golden Hour Salon</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="../css/base.css">
-    <link rel="stylesheet" href="../css/layout.css">
-    <link rel="stylesheet" href="../css/components.css">
-    <link rel="stylesheet" href="../css/pages.css">
-    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
 
     <canvas id="embersCanvas" style="display:none;"></canvas>
-    <audio id="bg-music" src="../assets/aakash-gandhi-heavenly-(no-copyright-music)-made-with-Voicemod.mp3" loop></audio>
+    <audio id="bg-music" src="assets/aakash-gandhi-heavenly-(no-copyright-music)-made-with-Voicemod.mp3" loop></audio>
     <button class="music-toggle paused" id="musicControl" title="Toggle Ambient Music" aria-label="Toggle ambient music"></button>
 
     <div class="app-window">
@@ -24,7 +24,7 @@
         <header class="main-header">
             <div class="header-container">
                 <div class="logo-area">
-                    <img src="../assets/goldenhrlogo.png" alt="Golden Hour Hair" class="main-logo-img">
+                    <img src="assets/goldenhrlogo.png" alt="Golden Hour Hair" class="main-logo-img">
                 </div>
                 <nav class="navbar">
                     <a href="index.html" class="nav-link">HOME</a>
@@ -44,47 +44,52 @@
         </header>
         <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
 
-        <section id="page-education" class="page-view">
+        <section id="page-team" class="page-view">
             <div class="section-padding">
                 <div class="container">
-
-                    <div class="edu-hero">
-                        <span class="section-subtitle">FOR STYLISTS & COSMETOLOGY STUDENTS</span>
-                        <h3 class="edu-hero-title">Extension Education <span class="text-cursive">Program</span></h3>
-                        <p class="section-paragraph">
-                            Take your extension skills to the next level. Whether you're a cosmetology student or a licensed stylist looking to expand your services, this hands-on experience gives you everything you need to learn with confidence — from a fully stocked professional kit to expert virtual training.
-                        </p>
+                    <div class="center-title">
+                        <h3 class="section-title">The <span class="title-cursive">Creatives</span></h3>
+                        <p class="section-subtitle">Your diagnostic path guides</p>
                     </div>
+                    <div class="team-grid">
 
-                    <div class="edu-feature-grid">
-                        <div class="edu-feature-card">
-                            <div class="edu-feature-icon"><i class="fa-solid fa-suitcase-medical"></i></div>
-                            <h5>Professional Kit</h5>
-                            <p>Every student begins with a fully stocked professional kit, giving you the exact tools and materials used in-studio.</p>
-                        </div>
-                        <div class="edu-feature-card">
-                            <div class="edu-feature-icon"><i class="fa-solid fa-video"></i></div>
-                            <h5>Expert Virtual Training</h5>
-                            <p>Learn directly from our extension specialists through guided virtual sessions built around real technique.</p>
-                        </div>
-                        <div class="edu-feature-card">
-                            <div class="edu-feature-icon"><i class="fa-solid fa-scissors"></i></div>
-                            <h5>Luxury K-Tip & Weft</h5>
-                            <p>Graduate ready to confidently offer luxury K-Tip and Weft extension services to your own clients.</p>
-                        </div>
-                    </div>
-
-                    <div class="container-narrow">
-                        <div class="policy-block-text center-text">
-                            <h5>Ready to Enroll?</h5>
-                            <p>Reach out and we'll walk you through enrollment, scheduling, and everything included in your kit.</p>
-                            <div class="margin-top-2">
-                                <p class="notice-text">Email: goldenhourhair44@gmail.com &nbsp;|&nbsp; Call: (201) 882-1099</p>
-                                <a href="mailto:goldenhourhair44@gmail.com" class="btn-primary">Email Us</a>
+                        <div class="team-card">
+                            <div class="team-photo-frame">
+                                <img src="assets/jess.jpg" alt="Jessica Grieco" class="team-inline-photo">
+                            </div>
+                            <div class="team-info">
+                                <h5>Jessica Grieco</h5>
+                                <span class="stylist-specialty">Owner & Color/Extension Specialist</span>
+                                <p>Jess's signature is dimensional color, blonding, and seamless extensions designed to enhance your natural look.</p>
+                                <a href="booking.html" class="btn-text">View Availability →</a>
                             </div>
                         </div>
-                    </div>
 
+                        <div class="team-card">
+                            <div class="team-photo-frame">
+                                <img src="assets/drew.jpg" alt="Drew Suzara" class="team-inline-photo">
+                            </div>
+                            <div class="team-info">
+                                <h5>Drew Suzara</h5>
+                                <span class="stylist-specialty">Precision Cuts & Curl Specialist</span>
+                                <p>Known for precision cuts and expertly shaped curls, Drew specializes in personalized styles for women and men.</p>
+                                <a href="booking.html" class="btn-text">View Availability →</a>
+                            </div>
+                        </div>
+
+                        <div class="team-card">
+                            <div class="team-photo-frame">
+                                <img src="assets/maria.jpg" alt="Maria Luisa Morales" class="team-inline-photo">
+                            </div>
+                            <div class="team-info">
+                                <h5>Maria Luisa Morales</h5>
+                                <span class="stylist-specialty">Custom Color & Bridal Specialist</span>
+                                <p>From custom color and vivid transformations to extensions and bridal styling, Maria creates looks that are polished, modern, and uniquely yours.</p>
+                                <a href="booking.html" class="btn-text">View Availability →</a>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </section>
@@ -92,7 +97,7 @@
         <footer class="main-footer">
             <div class="container footer-content">
                 <div class="footer-brand">
-                    <img src="../assets/goldenhrlogo.png" alt="Golden Hour Logo" class="footer-brand-logo">
+                    <img src="assets/goldenhrlogo.png" alt="Golden Hour Logo" class="footer-brand-logo">
                     <p class="footer-address">44 Franklin Ave, Ridgewood, NJ 07450</p>
                     <p class="footer-phone-text">Contact: (201) 882-1099</p>
                 </div>
@@ -133,7 +138,7 @@
 
     <div class="chatbot-widget" id="chatbotRoot"></div>
 
-    <script src="../js/navigation.js"></script>
-    <script src="../js/main.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
