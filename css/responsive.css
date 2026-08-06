@@ -2,18 +2,7 @@
    GOLDEN HOUR SALON — responsive.css
 ============================================= */
 
-@media (max-width: 1024px) {
-  .suites-grid { grid-template-columns: 1fr 1fr; }
-  .home-suites-mini-grid { grid-template-columns: 1fr 1fr; }
-  .grid-2 { gap: 40px; }
-}
-
-@media (max-width: 768px) {
-  body { padding: 12px 6px; }
-  .main-header { padding: 0 20px; }
-  .header-container { height: 70px; }
-  .main-logo-img { height: 44px; }
-
+@media (max-width: 960px) {
   .hamburger-toggle { display: flex; }
 
   .navbar {
@@ -42,7 +31,19 @@
     width: 100%;
     border-bottom: 1px solid rgba(205,151,119,.1);
   }
+}
 
+@media (max-width: 1024px) {
+  .suites-grid { grid-template-columns: 1fr 1fr; }
+  .home-suites-mini-grid { grid-template-columns: 1fr 1fr; }
+  .grid-2 { gap: 40px; }
+}
+
+@media (max-width: 768px) {
+  body { padding: 12px 6px; }
+  .main-header { padding: 0 20px; }
+  .header-container { height: 70px; }
+  .main-logo-img { height: 44px; }
   .header-actions { display: flex; align-items: center; gap: 14px; }
   .btn-book-now { padding: 8px 16px; font-size: .62rem; }
 
