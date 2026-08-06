@@ -69,6 +69,17 @@
   .edu-hero { padding: 40px 28px; }
 }
 
+@media (max-width: 600px) {
+  body { padding: 0; }
+  .app-window {
+    border-radius: 20px;
+    box-shadow: none;
+    max-width: 100%;
+  }
+  .policy-block-text { padding: 28px 22px; }
+}
+
+
 @media (max-width: 480px) {
   .container, .container-narrow { padding: 0 18px; }
   .section-padding { padding: 44px 0; }
