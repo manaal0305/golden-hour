@@ -70,9 +70,9 @@
 }
 
 @media (max-width: 600px) {
-  body { padding: 4px; }
+  body { padding: 1px; }
   .app-window {
-    border-radius: 5px;
+    border-radius: 16px;
     box-shadow: none;
     max-width: 100%;
   }
