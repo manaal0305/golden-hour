@@ -2,27 +2,24 @@
 // GOLDEN HOUR SALON — main.js
 // =============================================
 
+window.addEventListener('load', () => {
+    const loader = document.getElementById('pageLoader');
+    if (loader) loader.classList.add('loaded');
+});
+
 document.addEventListener('DOMContentLoaded', () => {
 
-    /* ============================
-       MUSIC
-       - Plays automatically on first visit
-       - Continues position across page navigation
-       - Manual pause persists across navigation
-       - A hard refresh always restarts from 0 and plays
-    ============================ */
     const audio    = document.getElementById('bg-music');
     const musicBtn = document.getElementById('musicControl');
 
     if (audio && musicBtn) {
         audio.volume = 0.15;
 
-        // Detect reload vs normal navigation
         let navType = 'navigate';
         try {
             const navEntries = performance.getEntriesByType('navigation');
             if (navEntries && navEntries.length) {
-                navType = navEntries[0].type; // 'navigate' | 'reload' | 'back_forward'
+                navType = navEntries[0].type;
             } else if (performance.navigation) {
                 navType = performance.navigation.type === 1 ? 'reload' : 'navigate';
             }
@@ -31,7 +28,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const isReload = navType === 'reload';
 
         if (isReload) {
-            // Hard refresh: force restart from the beginning
             audio.currentTime = 0;
             localStorage.setItem('gh_music_time', '0');
             localStorage.setItem('gh_music_playing', 'true');
@@ -54,10 +50,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const storedPlaying = localStorage.getItem('gh_music_playing');
 
         if (!isReload && storedPlaying === 'false') {
-            // User paused it before navigating — respect that
             markPaused();
         } else {
-            // First-ever visit, reload, or was playing before — try to (re)start
             audio.play().then(markPlaying).catch(() => {
                 markPaused();
                 const startOnInteraction = () => {
@@ -91,6 +85,43 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    /* ============================
+       TESTIMONIAL CAROUSEL
+    ============================ */
+    const tcTrack = document.querySelector('.tc-track');
+    if (tcTrack) {
+        const slides   = Array.from(tcTrack.querySelectorAll('.tc-slide'));
+        const prevBtn  = document.querySelector('.tc-prev');
+        const nextBtn  = document.querySelector('.tc-next');
+        const dotsHolder = document.getElementById('tcDots');
+        const total    = slides.length;
+        let current    = 0;
+
+        slides.forEach((_, i) => {
+            const dot = document.createElement('span');
+            dot.classList.add('tc-dot');
+            dot.addEventListener('click', () => { current = i; render(); });
+            dotsHolder.appendChild(dot);
+        });
+        const dots = Array.from(dotsHolder.querySelectorAll('.tc-dot'));
+
+        function render() {
+            slides.forEach((s, i) => s.classList.toggle('tc-active', i === current));
+            dots.forEach((d, i) => d.classList.toggle('tc-dot-active', i === current));
+        }
+
+        prevBtn.addEventListener('click', () => {
+            current = (current - 1 + total) % total;
+            render();
+        });
+        nextBtn.addEventListener('click', () => {
+            current = (current + 1) % total;
+            render();
+        });
+
+        render();
+    }
+
     document.addEventListener('chatbotReady', initChatbot);
 
     /* ============================
@@ -105,8 +136,8 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const SALON_ADDRESS       = "44 Franklin Ave, Ridgewood, NJ 07450";
-    const SALON_PHONE_DISPLAY = "(201) 555-0199";
-    const SALON_PHONE_TEL     = "+12015550199";
+    const SALON_PHONE_DISPLAY = "(201) 882-1099";
+    const SALON_PHONE_TEL     = "+12018821099";
 
     const SALON_SERVICES = [
         { name: "Olaplex Treatment",              price: "$30",   time: "30 min",   keywords: ["olaplex"] },
@@ -174,9 +205,9 @@ document.addEventListener('DOMContentLoaded', () => {
             const el = document.createElement('div');
             el.classList.add('chat-msg', cls);
             if (cls === 'user-msg') {
-                el.innerText = content; // never render user input as HTML
+                el.innerText = content;
             } else {
-                el.innerHTML = content; // bot replies are built by us, safe to render links
+                el.innerHTML = content;
             }
             const tray = chatBody.querySelector('.suggested-prompts-tray');
             tray ? chatBody.insertBefore(el, tray) : chatBody.appendChild(el);
@@ -282,6 +313,37 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (q) sendMessage(q);
             });
         });
+    }
+
+    /* ============================
+       BOOKING POLICY MODAL
+       Shows once per browser session on booking.html.
+       To make it show on EVERY visit instead, delete the
+       "already === 'true'" check block below.
+    ============================ */
+    const policyOverlay = document.getElementById('policyModalOverlay');
+    if (policyOverlay) {
+        const already = sessionStorage.getItem('gh_policy_agreed');
+        if (already === 'true') {
+            policyOverlay.style.display = 'none';
+        } else {
+            document.body.style.overflow = 'hidden';
+            const checkbox = document.getElementById('policyAgreeCheckbox');
+            const agreeBtn = document.getElementById('policyAgreeBtn');
+
+            checkbox.addEventListener('change', () => {
+                agreeBtn.disabled = !checkbox.checked;
+            });
+
+            agreeBtn.addEventListener('click', () => {
+                sessionStorage.setItem('gh_policy_agreed', 'true');
+                policyOverlay.classList.add('closing');
+                setTimeout(() => {
+                    policyOverlay.style.display = 'none';
+                    document.body.style.overflow = '';
+                }, 300);
+            });
+        }
     }
 
 });

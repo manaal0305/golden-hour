@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services | Golden Hour Salon</title>
+    <meta name="description" content="Explore the full service menu at Golden Hour Salon in Ridgewood, NJ: haircuts, color, extensions, keratin treatments, and more.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -12,8 +13,15 @@
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/pages.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="icon" type="image/png" href="assets/ghfavicon.png">
 </head>
 <body>
+
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-shimmer-logo">
+            <img src="assets/goldenhrlogo.png" alt="Loading">
+        </div>
+    </div>
 
     <canvas id="embersCanvas" style="display:none;"></canvas>
     <audio id="bg-music" src="assets/aakash-gandhi-heavenly-(no-copyright-music)-made-with-Voicemod.mp3" loop></audio>
@@ -140,7 +148,10 @@
 
                         <div class="center-text margin-top-2">
                             <p class="notice-text">Exact rates vary by stylist and are confirmed at booking through our GlossGenius portal.</p>
-                            <a href="booking.html" class="btn-primary">View Availability & Book</a>
+                            <div class="dual-cta-row">
+                                <a href="booking.html" class="btn-primary">View Availability & Book</a>
+                                <a href="gallery.html" class="btn-secondary-light">View Our Work</a>
+                            </div>
                         </div>
 
                     </div>
@@ -163,6 +174,7 @@
                         <a href="services.html">Services</a>
                         <a href="bridal.html">Bridal</a>
                         <a href="booking.html">Book Now</a>
+                        <a href="gallery.html">Gallery</a>
                     </div>
                     <div class="footer-nav-col">
                         <h6>DIRECTORY</h6>

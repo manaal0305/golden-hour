@@ -8,30 +8,29 @@
   z-index: 10;
   max-width: 1300px;
   margin: 0 auto;
-  background: var(--bg);
+  background:
+    radial-gradient(ellipse 900px 500px at 12% 0%, rgba(255,200,120,.14) 0%, transparent 55%),
+    radial-gradient(ellipse 800px 500px at 100% 100%, rgba(230,170,110,.11) 0%, transparent 55%),
+    var(--bg);
   border-radius: var(--r-xl);
-  box-shadow: 0 32px 80px rgba(62,39,35,.22), 0 8px 24px rgba(62,39,35,.12), 0 0 90px rgba(205,151,119,.16);
+  box-shadow: 0 32px 80px rgba(62,39,35,.22), 0 8px 24px rgba(62,39,35,.12);
   overflow: hidden;
   display: flex;
   flex-direction: column;
 }
 
-/* Soft golden-hour light wash over the entire site — subtle warmth, no color changes underneath */
 .app-window::before {
   content: "";
   position: absolute;
   inset: 0;
   z-index: 400;
   pointer-events: none;
-  background:
-    radial-gradient(ellipse 950px 550px at 12% 0%, rgba(255,200,120,.35) 0%, transparent 60%),
-    radial-gradient(ellipse 800px 550px at 100% 100%, rgba(230,170,110,.28) 0%, transparent 60%);
-  mix-blend-mode: overlay;
-  animation: goldenHourPulse 8s ease-in-out infinite;
+  background: radial-gradient(ellipse 900px 500px at 12% 0%, rgba(255,200,120,.12) 0%, transparent 55%);
+  animation: goldenBreath 10s ease-in-out infinite;
 }
 
-@keyframes goldenHourPulse {
-  0%, 100% { opacity: .65; }
+@keyframes goldenBreath {
+  0%, 100% { opacity: .5; }
   50%      { opacity: 1; }
 }
 
@@ -183,3 +182,10 @@
 .footer-social-icons i { color: var(--b50); font-size: .95rem; }
 
 .footer-bottom { text-align: center; padding-top: 32px; font-size: .72rem; color: var(--b300); font-weight: 300; }
+
+.dual-cta-row {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
