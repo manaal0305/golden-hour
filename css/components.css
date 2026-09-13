@@ -12,15 +12,44 @@
   background: var(--bg-dark);
   display: flex; align-items: center; justify-content: center;
   transition: opacity .5s ease, visibility .5s ease;
+  will-change: opacity;
+  animation: forceHideLoader 0s 6s forwards;
 }
 .page-loader.loaded { opacity: 0; visibility: hidden; pointer-events: none; }
+
+@keyframes forceHideLoader {
+  to { opacity: 0; visibility: hidden; pointer-events: none; }
+}
+
+.loader-shimmer-logo {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loader-shimmer-logo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 2px solid rgba(205,151,119,.18);
+  border-top-color: var(--accent);
+  animation: loaderSpin 1.8s linear infinite;
+}
 .loader-shimmer-logo img {
-  height: 70px; width: auto;
-  animation: loaderPulse 1.4s ease-in-out infinite;
+  height: 90px; width: auto;
+  animation: loaderPulse 2.2s ease-in-out infinite;
+}
+
+@keyframes loaderSpin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
 }
 @keyframes loaderPulse {
-  0%, 100% { opacity: .4; transform: scale(.96); }
-  50%      { opacity: 1;  transform: scale(1); }
+  0%, 100% { opacity: .55; transform: scale(.97); }
+  50%      { opacity: 1;   transform: scale(1); }
 }
 
 .btn-primary {
@@ -256,6 +285,7 @@
 .policy-modal-agree:not(:disabled) { opacity: 1; cursor: pointer; }
 
 .policy-modal-link { display: block; margin-top: 14px; font-size: .72rem; color: var(--accent); letter-spacing: 1px; }
+
 /* ══════════════════════════════════════
    MUSIC BUTTON
 ══════════════════════════════════════ */
@@ -372,4 +402,15 @@
   0%   { filter: drop-shadow(0 0 5px rgba(205,151,119,.15)); }
   50%  { filter: drop-shadow(0 0 16px rgba(205,151,119,.38)); }
   100% { filter: drop-shadow(0 0 5px rgba(205,151,119,.15)); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-loader,
+  .loader-shimmer-logo::before,
+  .loader-shimmer-logo img,
+  .music-toggle::before,
+  .chat-toggle-btn,
+  .typing-indicator span {
+    animation: none;
+  }
 }
